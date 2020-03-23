@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SzX-V9-MUD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Snap Kit View Controller-->
+        <scene sceneID="t5Y-vj-98j">
+            <objects>
+                <viewController id="SzX-V9-MUD" customClass="SnapKitViewController" customModule="SampleCodeConstraints" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3st-Pl-a0q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfb-XH-d56">
+                                <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="JHi-CG-FC0"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaW-jV-drh">
+                                <rect key="frame" x="0.0" y="414" width="414" height="41"/>
+                                <string key="text">↑
+別のファイルから読み込んだよ</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vfb-XH-d56" firstAttribute="top" secondItem="vJY-bo-adM" secondAttribute="top" id="Csg-pR-RaH"/>
+                            <constraint firstItem="PaW-jV-drh" firstAttribute="leading" secondItem="vJY-bo-adM" secondAttribute="leading" id="K9l-EH-HUZ"/>
+                            <constraint firstItem="PaW-jV-drh" firstAttribute="top" secondItem="Vfb-XH-d56" secondAttribute="bottom" constant="70" id="ci6-2w-7hS"/>
+                            <constraint firstItem="Vfb-XH-d56" firstAttribute="leading" secondItem="vJY-bo-adM" secondAttribute="leading" id="isl-li-dz2"/>
+                            <constraint firstItem="PaW-jV-drh" firstAttribute="trailing" secondItem="vJY-bo-adM" secondAttribute="trailing" id="jDD-3F-n8O"/>
+                            <constraint firstItem="vJY-bo-adM" firstAttribute="trailing" secondItem="Vfb-XH-d56" secondAttribute="trailing" id="zEo-Iv-J85"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vJY-bo-adM"/>
+                    </view>
+                    <connections>
+                        <outlet property="headerBGView" destination="Vfb-XH-d56" id="MA4-LN-jfi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g5N-lG-0uv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="89"/>
+        </scene>
+    </scenes>
+</document>
