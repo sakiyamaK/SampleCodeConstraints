@@ -26,23 +26,24 @@ class NormalViewController: UIViewController {
 
         headerBGView.addSubview(v)
 
-        //古い仕様をoffにしないとバグる
+        //AutoLayout以前に使われてたレイアウトの仕組みをAutoLayoutの制約に変換するかどうかを設定するフラグ
+        //デフォはtrueになってて、余計な制約が付いてバグるためfalseにする必要がある(なんでAppleはこんなことしたのか
         v.translatesAutoresizingMaskIntoConstraints = false
 
         //制約をつける
-//        v.topAnchor.constraint(equalTo: headerBGView.topAnchor).isActive = true
-//        v.leadingAnchor.constraint(equalTo: headerBGView.leadingAnchor).isActive = true
-//        v.trailingAnchor.constraint(equalTo: headerBGView.trailingAnchor).isActive = true
-//        v.bottomAnchor.constraint(equalTo: headerBGView.bottomAnchor).isActive = true
+        v.topAnchor.constraint(equalTo: headerBGView.topAnchor).isActive = true
+        v.leadingAnchor.constraint(equalTo: headerBGView.leadingAnchor).isActive = true
+        v.trailingAnchor.constraint(equalTo: headerBGView.trailingAnchor).isActive = true
+        v.bottomAnchor.constraint(equalTo: headerBGView.bottomAnchor).isActive = true
 
         //こうやって制約をまとめて、最後にactiveにもできる
-        let constraints = [
-            v.topAnchor.constraint(equalTo: headerBGView.topAnchor),
-            v.leadingAnchor.constraint(equalTo: headerBGView.leadingAnchor),
-            v.trailingAnchor.constraint(equalTo: headerBGView.trailingAnchor),
-            v.bottomAnchor.constraint(equalTo: headerBGView.bottomAnchor)
-        ]
-        NSLayoutConstraint.activate(constraints)
+//        let constraints = [
+//            v.topAnchor.constraint(equalTo: headerBGView.topAnchor),
+//            v.leadingAnchor.constraint(equalTo: headerBGView.leadingAnchor),
+//            v.trailingAnchor.constraint(equalTo: headerBGView.trailingAnchor),
+//            v.bottomAnchor.constraint(equalTo: headerBGView.bottomAnchor)
+//        ]
+//        NSLayoutConstraint.activate(constraints)
 
     }
 }
