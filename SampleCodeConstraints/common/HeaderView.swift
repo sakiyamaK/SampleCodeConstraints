@@ -9,5 +9,7 @@
 import UIKit
 
 class HeaderView: UIView {
+  func configure() {
     
+  }
 }

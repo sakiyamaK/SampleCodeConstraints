@@ -10,40 +10,36 @@ import UIKit
 
 class NormalViewController: UIViewController {
 
-    @IBOutlet weak var headerBGView: UIView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  private let headerView: HeaderView = UINib.init(nibName: "Header", bundle: nil).instantiate(withOwner: nil, options: nil).first as! HeaderView
+  @IBOutlet weak var headerContainerView: UIView! {
+    didSet {
+      headerContainerView.addSubview(headerView)
 
-        self.setupView()
+      //AutoLayout以前に使われてたレイアウトの仕組みをAutoLayoutの制約に変換するかどうかを設定するフラグ
+      //デフォはtrueになってて、余計な制約が付いてバグるためfalseにする必要がある(なんでAppleはこんなことしたのか
+      headerView.translatesAutoresizingMaskIntoConstraints = false
+
+      //制約をつける
+      headerView.topAnchor.constraint(equalTo: headerContainerView.topAnchor, constant: 100).isActive = true
+      headerView.leadingAnchor.constraint(equalTo: headerContainerView.leadingAnchor).isActive = true
+      headerView.trailingAnchor.constraint(equalTo: headerContainerView.trailingAnchor).isActive = true
+      headerView.bottomAnchor.constraint(equalTo: headerContainerView.bottomAnchor).isActive = true
+
+      //こうやって制約をまとめて、最後にactiveにもできる
+//      let constraints = [
+//          headerView.topAnchor.constraint(equalTo: headerContainerView.topAnchor),
+//          headerView.leadingAnchor.constraint(equalTo: headerContainerView.leadingAnchor),
+//          headerView.trailingAnchor.constraint(equalTo: headerContainerView.trailingAnchor),
+//          headerView.bottomAnchor.constraint(equalTo: headerContainerView.bottomAnchor)
+//      ]
+//      NSLayoutConstraint.activate(constraints)
     }
+  }
 
-    private func setupView() {
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-        guard let v = UINib.init(nibName: "Header", bundle: nil).instantiate(withOwner: nil, options: nil).first as? HeaderView else {
-            return
-        }
-
-        headerBGView.addSubview(v)
-
-        //AutoLayout以前に使われてたレイアウトの仕組みをAutoLayoutの制約に変換するかどうかを設定するフラグ
-        //デフォはtrueになってて、余計な制約が付いてバグるためfalseにする必要がある(なんでAppleはこんなことしたのか
-        v.translatesAutoresizingMaskIntoConstraints = false
-
-        //制約をつける
-        v.topAnchor.constraint(equalTo: headerBGView.topAnchor).isActive = true
-        v.leadingAnchor.constraint(equalTo: headerBGView.leadingAnchor).isActive = true
-        v.trailingAnchor.constraint(equalTo: headerBGView.trailingAnchor).isActive = true
-        v.bottomAnchor.constraint(equalTo: headerBGView.bottomAnchor).isActive = true
-
-        //こうやって制約をまとめて、最後にactiveにもできる
-//        let constraints = [
-//            v.topAnchor.constraint(equalTo: headerBGView.topAnchor),
-//            v.leadingAnchor.constraint(equalTo: headerBGView.leadingAnchor),
-//            v.trailingAnchor.constraint(equalTo: headerBGView.trailingAnchor),
-//            v.bottomAnchor.constraint(equalTo: headerBGView.bottomAnchor)
-//        ]
-//        NSLayoutConstraint.activate(constraints)
-
-    }
+    headerView.configure()
+  }
 }
