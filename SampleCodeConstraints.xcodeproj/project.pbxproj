@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		99BCBB4C251A5A592D4676F4 /* Pods_SampleCodeConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F48E1C681DFCB413F8D8874 /* Pods_SampleCodeConstraints.framework */; };
+		B66A83122527003D00949346 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66A83112527003D00949346 /* SampleModel.swift */; };
+		B66A83152527013D00949346 /* Demo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66A83142527013D00949346 /* Demo.storyboard */; };
+		B66A83172527015000949346 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66A83162527015000949346 /* DemoViewController.swift */; };
 		B68E8E0D24284562000CE79F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68E8E0C24284562000CE79F /* AppDelegate.swift */; };
 		B68E8E1124284562000CE79F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68E8E1024284562000CE79F /* ViewController.swift */; };
 		B68E8E1424284562000CE79F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68E8E1224284562000CE79F /* Main.storyboard */; };
@@ -48,6 +51,9 @@
 		8B491DBCC4D2B1835D7E8550 /* Pods-SampleCodeConstraintsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCodeConstraintsTests.debug.xcconfig"; path = "Target Support Files/Pods-SampleCodeConstraintsTests/Pods-SampleCodeConstraintsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F48E1C681DFCB413F8D8874 /* Pods_SampleCodeConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleCodeConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E32DB9DDBEA0F305103BD4 /* Pods_SampleCodeConstraintsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleCodeConstraintsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B66A83112527003D00949346 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
+		B66A83142527013D00949346 /* Demo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Demo.storyboard; sourceTree = "<group>"; };
+		B66A83162527015000949346 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		B68E8E0924284562000CE79F /* SampleCodeConstraints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCodeConstraints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68E8E0C24284562000CE79F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B68E8E1024284562000CE79F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +130,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B66A83102527003000949346 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B66A83112527003D00949346 /* SampleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B66A83132527012A00949346 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				B66A83142527013D00949346 /* Demo.storyboard */,
+				B66A83162527015000949346 /* DemoViewController.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		B68E8E0024284562000CE79F = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +172,8 @@
 		B68E8E0B24284562000CE79F /* SampleCodeConstraints */ = {
 			isa = PBXGroup;
 			children = (
+				B66A83132527012A00949346 /* Demo */,
+				B66A83102527003000949346 /* Model */,
 				B68E8E42242846BF000CE79F /* common */,
 				B68E8E3D242845A1000CE79F /* normal */,
 				B68E8E3C24284595000CE79F /* snapkit */,
@@ -320,6 +345,7 @@
 				B68E8E44242846D8000CE79F /* Header.xib in Resources */,
 				B68E8E3F2428466F000CE79F /* Normal.storyboard in Resources */,
 				B68E8E48242851C7000CE79F /* SnapKit.storyboard in Resources */,
+				B66A83152527013D00949346 /* Demo.storyboard in Resources */,
 				B68E8E1624284564000CE79F /* Assets.xcassets in Resources */,
 				B68E8E1424284562000CE79F /* Main.storyboard in Resources */,
 			);
@@ -450,8 +476,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B68E8E1124284562000CE79F /* ViewController.swift in Sources */,
+				B66A83122527003D00949346 /* SampleModel.swift in Sources */,
 				B68E8E4124284682000CE79F /* NormalViewController.swift in Sources */,
 				B68E8E4A242851D4000CE79F /* SnapKitViewController.swift in Sources */,
+				B66A83172527015000949346 /* DemoViewController.swift in Sources */,
 				B68E8E0D24284562000CE79F /* AppDelegate.swift in Sources */,
 				B68E8E46242846E1000CE79F /* HeaderView.swift in Sources */,
 			);

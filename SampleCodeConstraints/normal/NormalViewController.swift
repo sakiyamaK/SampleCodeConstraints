@@ -39,7 +39,5 @@ class NormalViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    headerView.configure()
   }
 }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K1d-cZ-KFK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Demo View Controller-->
+        <scene sceneID="lGA-DS-KQK">
+            <objects>
+                <viewController id="K1d-cZ-KFK" customClass="DemoViewController" customModule="SampleCodeConstraints" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GtK-YR-aOR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWe-jn-IWp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="448"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="29T-n4-gRy">
+                                <rect key="frame" x="0.0" y="492" width="414" height="370"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LWe-jn-IWp" firstAttribute="leading" secondItem="mNM-hQ-JsO" secondAttribute="leading" id="Grx-YX-Uh7"/>
+                            <constraint firstItem="mNM-hQ-JsO" firstAttribute="bottom" secondItem="29T-n4-gRy" secondAttribute="bottom" id="MUA-xJ-ZJG"/>
+                            <constraint firstItem="mNM-hQ-JsO" firstAttribute="trailing" secondItem="LWe-jn-IWp" secondAttribute="trailing" id="O5I-gR-MqY"/>
+                            <constraint firstItem="LWe-jn-IWp" firstAttribute="height" secondItem="GtK-YR-aOR" secondAttribute="height" multiplier="0.5" id="R3G-Fu-odq"/>
+                            <constraint firstItem="29T-n4-gRy" firstAttribute="top" secondItem="LWe-jn-IWp" secondAttribute="bottom" id="XTI-cM-9Jn"/>
+                            <constraint firstItem="29T-n4-gRy" firstAttribute="leading" secondItem="mNM-hQ-JsO" secondAttribute="leading" id="e0r-AL-Ber"/>
+                            <constraint firstItem="LWe-jn-IWp" firstAttribute="top" secondItem="mNM-hQ-JsO" secondAttribute="top" id="n1x-Dm-SM4"/>
+                            <constraint firstItem="mNM-hQ-JsO" firstAttribute="trailing" secondItem="29T-n4-gRy" secondAttribute="trailing" id="xNc-pl-hS2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mNM-hQ-JsO"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomStackView" destination="29T-n4-gRy" id="4Hd-hS-V0P"/>
+                        <outlet property="topContainerView" destination="LWe-jn-IWp" id="kKg-Eb-HsO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DqG-uY-qU6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="-213"/>
+        </scene>
+    </scenes>
+</document>
