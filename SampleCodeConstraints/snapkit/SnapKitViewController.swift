@@ -10,18 +10,18 @@ import UIKit
 import SnapKit
 
 class SnapKitViewController: UIViewController {
-
-  private let headerView: HeaderView = UINib.init(nibName: "Header", bundle: nil).instantiate(withOwner: nil, options: nil).first as! HeaderView
-  @IBOutlet weak var headerContainerView: UIView! {
-    didSet {
-      headerContainerView.addSubview(headerView)
-      //これだけで四方向のedgesを親viewに合わせるになっている
-      headerView.snp.makeConstraints { $0.edges.equalToSuperview() }
+    
+    private let headerView: HeaderView = UINib.init(nibName: "Header", bundle: nil).instantiate(withOwner: nil, options: nil).first as! HeaderView
+    @IBOutlet weak var headerContainerView: UIView! {
+        didSet {
+            headerContainerView.addSubview(headerView)
+            //これだけで四方向のedgesを親viewに合わせるになっている
+            headerView.snp.makeConstraints { $0.edges.equalToSuperview() }
+        }
     }
-  }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
 }
