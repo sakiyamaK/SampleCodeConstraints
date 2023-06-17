@@ -11,6 +11,7 @@
 		B66A83122527003D00949346 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66A83112527003D00949346 /* SampleModel.swift */; };
 		B66A83152527013D00949346 /* Demo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66A83142527013D00949346 /* Demo.storyboard */; };
 		B66A83172527015000949346 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66A83162527015000949346 /* DemoViewController.swift */; };
+		B676D24029BD648F00D8EB3C /* NormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68E8E4024284682000CE79F /* NormalViewController.swift */; };
 		B68E8E0D24284562000CE79F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68E8E0C24284562000CE79F /* AppDelegate.swift */; };
 		B68E8E1124284562000CE79F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68E8E1024284562000CE79F /* ViewController.swift */; };
 		B68E8E1424284562000CE79F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68E8E1224284562000CE79F /* Main.storyboard */; };
@@ -498,6 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B68E8E2F24284564000CE79F /* SampleCodeConstraintsUITests.swift in Sources */,
+				B676D24029BD648F00D8EB3C /* NormalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
